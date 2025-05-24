@@ -57,3 +57,21 @@ If you have time then demonstrating any of the following would be considered as 
 ## Submission
 
 Please submit your completed exercise either by supplying the URL of your forked repository or by including a ZIP archive of your local folder - please ensure you **do not** include the `node_modules` folder.
+
+### 🚀 Tech Stack
+
+- Vite + React + TypeScript
+- MirageJS for API mocking
+- Tailwind CSS
+
+### 🧠 Developer Notes
+
+This application was migrated from Create React App to Vite to improve development startup and hot reload times, and to adopt a more modern and flexible toolchain.
+
+### 📚 Resources
+
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [MirageJS](https://miragejs.com/)
