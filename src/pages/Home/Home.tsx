@@ -9,6 +9,7 @@ const Home: React.FC = () => {
     const handleClick = () => {
         navigate("/posts");
     }
+
     return (
         <Layout>
             <HomeLayout>
