@@ -10,3 +10,11 @@ export function useFilter(posts: Post[], selectedCategories: string[]) {
     );
   }, [posts, selectedCategories]);
 }
+
+export function useId(posts: Post[], id: string | undefined) {
+  return useMemo(() => {
+    if (!id) return null;
+
+    return posts.filter((post) => post.id === id)[0];
+  }, [posts, id]);
+}
