@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fadeIn } from '../../styles/animations';
 
 export const ListContainer = styled.ul`
   display: grid;
@@ -9,4 +10,5 @@ export const ListContainer = styled.ul`
   list-style: none;
   max-width: 1200px;
   margin-inline: auto;
+  animation: ${fadeIn} 0.5s ease;
 `;

@@ -3,6 +3,7 @@ export type ButtonProps = {
   variant?: 'primary' | 'secondary' | 'danger';
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
+  ariaLabel?: string;
 };
 
 export type StyledButtonProps = {

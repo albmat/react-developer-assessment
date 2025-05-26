@@ -6,9 +6,11 @@ export default function Button({
     variant = 'primary',
     onClick,
     type = 'button',
+    ariaLabel
 }: ButtonProps) {
     return (
-        <StyledButton $variant={variant} onClick={onClick} type={type}>
+        <StyledButton $variant={variant} onClick={onClick} type={type} aria-label={ariaLabel}
+        >
             {children}
         </StyledButton>
     );
