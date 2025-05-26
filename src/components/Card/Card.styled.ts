@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(motion.div)`
   background-color: white;
   border-radius: 1rem;
   padding: 1.5rem;
@@ -29,7 +30,7 @@ export const CardTitle = styled.h2`
   text-transform: capitalize;
 `;
 
-export const CardDate = styled.p`
+export const CardDate = styled.div`
   font-size: 0.8rem;
   font-weight: bold;
   margin-bottom: 0.5rem;

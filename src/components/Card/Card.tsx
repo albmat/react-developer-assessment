@@ -5,7 +5,11 @@ import FormattedDate from '../../utils/FormattedDate';
 
 export const Card = ({ post }: { post: Post }) => {
     return (
-        <CardContainer>
+        <CardContainer
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5 }}>
             <CardWrapper>
                 <div>
                     <CardTitle>{post.title}</CardTitle>
