@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './components/App';
 import './mock';
 import './styles/index.css';
@@ -16,7 +17,9 @@ const queryClient = new QueryClient();
 ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById('root'),
