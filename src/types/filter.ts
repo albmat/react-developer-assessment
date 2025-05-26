@@ -1,8 +1,8 @@
 import { Dispatch, SetStateAction } from 'react';
 
 export type FiltersProps = {
-  setSelectedCategory: Dispatch<SetStateAction<FilterItem[]>>;
-  selectedCategory: string[];
+  setSelectedCategories: Dispatch<SetStateAction<FilterItem[]>>;
+  selectedCategories: string[];
   items: FilterItem[];
 };
 

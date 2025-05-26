@@ -2,8 +2,8 @@ import { FilterWrapper, FilterCatTag } from './Filter.styled';
 import { FiltersProps } from '../../types/filter';
 
 export default function Filter({
-    setSelectedCategory,
-    selectedCategory,
+    setSelectedCategories,
+    selectedCategories,
     items
 }: FiltersProps) {
     return (
@@ -12,9 +12,12 @@ export default function Filter({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5 }}>
-            <FilterCatTag key={'all'} $selected={selectedCategory.length === 0} onClick={() => setSelectedCategory([])} >All</FilterCatTag>
+            <FilterCatTag key={'all'} $selected={selectedCategories.length === 0} onClick={() => setSelectedCategories([])} >All</FilterCatTag>
             {items.map((item: string, i) => {
-                return <FilterCatTag $selected={selectedCategory.length > 0 && selectedCategory.includes(item)} key={i} onClick={() => setSelectedCategory((curr) => [...curr, item])} >{item}</FilterCatTag>
+                return <FilterCatTag $selected={selectedCategories.length > 0 && selectedCategories.includes(item)} key={i} onClick={() => {
+                    const newCats = [...selectedCategories, item]
+                    setSelectedCategories(newCats)
+                }} >{item}</FilterCatTag>
             })}
         </FilterWrapper>
 

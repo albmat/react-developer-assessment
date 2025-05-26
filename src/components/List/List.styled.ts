@@ -24,3 +24,9 @@ export const ListContainer = styled.ul`
   margin-inline: auto;
   animation: ${fadeIn} 0.5s ease;
 `;
+
+export const ListText = styled.p`
+  text-align: center;
+  font-weight: bold;
+  animation: ${fadeIn} 3s ease;
+`;
