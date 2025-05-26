@@ -1,7 +1,5 @@
-import { Dispatch, SetStateAction } from 'react';
-
 export type FiltersProps = {
-  setSelectedCategories: Dispatch<SetStateAction<FilterItem[]>>;
+  setSelectedCategories: (filters: FilterItem[]) => void;
   selectedCategories: string[];
   items: FilterItem[];
 };
