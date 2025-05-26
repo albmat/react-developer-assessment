@@ -62,7 +62,7 @@ Please submit your completed exercise either by supplying the URL of your forked
 
 - Vite + React + TypeScript
 - MirageJS for API mocking
-- Tailwind CSS
+- Styled Components
 
 ### 🧠 Developer Notes
 
@@ -73,5 +73,5 @@ This application was migrated from Create React App to Vite to improve developme
 - [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Styled Components](https://styled-components.com/)
 - [MirageJS](https://miragejs.com/)
