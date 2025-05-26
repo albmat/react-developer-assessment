@@ -2,7 +2,7 @@ export type Post = {
   id: number;
   author: Author;
   categories: Category[];
-  publishedDate: string;
+  publishDate: string;
   summary: string;
   title: string;
 };

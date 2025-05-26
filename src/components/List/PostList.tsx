@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { usePosts } from '../hooks/usePosts';
-import { Card } from './Card/Card';
-import { Post } from '../types/post';
+import { usePosts } from '../../hooks/usePosts';
+import { Card } from '../Card/Card';
+import { Post } from '../../types/post';
+import { ListContainer } from './List.styled';
 
 export const PostList = ({ title }: { title: string }) => {
     const { data, isLoading, error } = usePosts();
@@ -18,11 +19,11 @@ export const PostList = ({ title }: { title: string }) => {
     return (
         <section>
             <h1>{title}</h1>
-            <ul>
+            <ListContainer>
                 {posts.map((post: Post) => (
                     <Card post={post} key={post.id} />
                 ))}
-            </ul>
+            </ListContainer>
         </section>
     );
 };

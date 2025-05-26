@@ -1,5 +1,5 @@
 import Layout from '../Layout';
-import { PostList } from '../../components/PostList';
+import { PostList } from '../../components/List/PostList';
 
 const PostDetail: React.FC = () => {
     return (
