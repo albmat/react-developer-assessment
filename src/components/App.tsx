@@ -1,9 +1,9 @@
 import Home from '../pages/Home/Home';
 import PostDetail from '../pages/Posts/PostDetail';
 import Posts from '../pages/Posts/Posts';
-import style, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/Theme';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 const App: React.FC = () => {
   return (

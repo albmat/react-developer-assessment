@@ -8,5 +8,6 @@ export const Container = styled.div`
   margin: auto;
   padding: 5rem;
   width: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
 `;
