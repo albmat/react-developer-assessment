@@ -9,19 +9,29 @@ import { useParams } from 'react-router-dom';
 
 const PostDetailPage: React.FC = () => {
     const { data, isLoading, error } = usePosts();
-
-    const params = useParams()
-    const { id } = params;
+    const { id } = useParams<{ id: string }>();
 
     const posts: Post[] = data?.posts ?? [];
     const filteredPost = useId(posts, id);
 
-    if (isLoading) return <Layout ><Loading /></Layout>;
-    if (error || !filteredPost) return <Error message={(error as Error).message || 'No post available'} />;
+    if (isLoading)
+        return (
+            <Layout aria-busy={isLoading} aria-live="polite">
+                <Loading />
+            </Layout>
+        );
+    if (error || !id || !filteredPost) {
+        const errorMessage = error instanceof Error ? error.message : 'No post available';
+        return <Error message={errorMessage} />;
+    }
 
     return (
-        <Layout >
-            <PostDetail title={filteredPost.title} author={filteredPost.author.name} isLoading={isLoading} />
+        <Layout>
+            <PostDetail
+                title={filteredPost.title}
+                author={filteredPost.author.name}
+                isLoading={isLoading}
+            />
         </Layout>
     );
 };

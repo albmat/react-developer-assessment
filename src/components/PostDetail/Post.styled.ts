@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { fadeIn } from '../../styles/animations';
 
-export const PostWrapper = styled.section`
+export const PostWrapper = styled.div`
   text-align: center;
   animation: ${fadeIn} 0.5s ease;
 `;
