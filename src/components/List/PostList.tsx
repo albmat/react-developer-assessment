@@ -6,13 +6,15 @@ import { AnimatePresence } from 'framer-motion';
 export const PostList = ({ filteredPosts }: { filteredPosts: Post[] }) => {
 
     return (
-        <ListContainer>
-            <AnimatePresence>
-                {filteredPosts.length > 0 ? filteredPosts
-                    .map((post: Post) => (
-                        <Card post={post} key={post.id} />
-                    )) : <ListText>No available posts</ListText>}
-            </AnimatePresence>
-        </ListContainer>
+        <div>
+            <ListContainer>
+                <AnimatePresence>
+                    {filteredPosts.length > 0 ? filteredPosts
+                        .map((post: Post) => (
+                            <Card post={post} key={post.id} />
+                        )) : <ListText>No available posts</ListText>}
+                </AnimatePresence>
+            </ListContainer>
+        </div>
     );
 };
